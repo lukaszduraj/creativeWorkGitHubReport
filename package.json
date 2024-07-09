@@ -10,7 +10,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.7.0"
   },
   "author": "Lukasz Duraj",
   "license": "MIT"
