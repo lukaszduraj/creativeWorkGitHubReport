@@ -14,11 +14,20 @@ This script is designed to create part of your creative work monthly report base
     ```bash
     export NODE_AUTH_TOKEN=your-github-personal-access-token
     ```
-4. Run the script (make sure to `chmod + ./index.js` the script first):
+
+## Run  
+
+Run the script (make sure to `chmod + ./index.js` the script first):
     ```bash
     ./index.js
     ```
-   
+You can install your package globally on your workstation using npm:
+
+```bash
+npm install -g creative-work-report
+creative-work-report
+```
+
 ## Example output
 
 ```txt
