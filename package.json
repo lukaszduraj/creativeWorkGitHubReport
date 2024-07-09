@@ -1,0 +1,17 @@
+{
+  "name": "creative-work-report",
+  "version": "1.0.0",
+  "description": "Generate a creative work monthly report based on GitHub pull requests.",
+  "main": "index.js",
+  "bin": {
+    "creative-work-report": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "author": "Lukasz Duraj",
+  "license": "MIT"
+}
