@@ -53,7 +53,8 @@ function getFileName() {
 async function getPullRequests(username) {
   const previousMonth20thDate = getPreviousMonth20thDate();
   try {
-    const response = await fetch(`https://api.github.com/search/issues?q=author:${username}+type:pr+created:<=${previousMonth20thDate}`, {
+    const request = `https://api.github.com/search/issues?q=author:${username}+type:pr+created:>=${previousMonth20thDate}`;
+    const response = await fetch(request, {
       headers: {
         'Authorization': `token ${token}`,
         'Accept': 'application/vnd.github.v3+json',
@@ -73,7 +74,7 @@ async function getPullRequests(username) {
 
     outputStream.write(`What was created/updated/changed/added/developed?${sep}Short description${sep}Link to specific documentation/confirmation (for example from Confluence, Jira, pull request on Github)\n`);
     pullRequests.forEach(pr => {
-      const lineContent = `N/A${sep}${pr.title}${sep}${pr.html_url}`;
+      const lineContent = `${pr.title}${sep}${new Date(pr.created_at)?.toISOString()?.split('T')[0]}${sep}${pr.html_url}`;
       console.log(lineContent);
       outputStream.write(lineContent+'\n');
     });
