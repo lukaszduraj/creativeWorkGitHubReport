@@ -1,6 +1,6 @@
 {
   "name": "creative-work-report",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate a creative work monthly report based on GitHub pull requests.",
   "main": "index.js",
   "bin": {
